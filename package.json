@@ -1,0 +1,53 @@
+{
+  "name": "turtle-vscode",
+  "displayName": "turtle-vscode",
+  "description": "Turtle languages support for VSCode",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": "https://github.com/oxfordturtle/turtle-vscode",
+  "engines": {
+    "vscode": "^1.46.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "turtleBASIC",
+        "aliases": ["Turtle BASIC", "turtleBASIC"],
+        "extensions": [".tbas"],
+        "configuration": "./basic-configuration.json"
+      },
+      {
+        "id": "turtlePascal",
+        "aliases": ["Turtle Pascal", "turtlePascal"],
+        "extensions": [".tpas"],
+        "configuration": "./pascal-configuration.json"
+      },
+      {
+        "id": "turtlePython",
+        "aliases": ["Turtle Python", "turtlePython"],
+        "extensions": [".tpy"],
+        "configuration": "./python-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "turtleBASIC",
+        "scopeName": "source.turtleBASIC",
+        "path": "./syntaxes/turtleBASIC.tmLanguage.json"
+      },
+      {
+        "language": "turtlePascal",
+        "scopeName": "source.turtlePascal",
+        "path": "./syntaxes/turtlePascal.tmLanguage.json"
+      },
+      {
+        "language": "turtlePython",
+        "scopeName": "source.turtlePython",
+        "path": "./syntaxes/turtlePython.tmLanguage.json"
+      }
+    ]
+  }
+}

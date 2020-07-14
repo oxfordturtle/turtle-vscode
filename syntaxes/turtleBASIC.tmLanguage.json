@@ -1,0 +1,50 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Turtle BASIC",
+  "patterns": [
+    { "include": "#escapes" },
+    { "include": "#keywords" },
+    { "include": "#operators" },
+    { "include": "#delimiters" },
+    { "include": "#comments" },
+    { "include": "#doubleStrings" }
+  ],
+  "repository": {
+    "escapes": {
+      "patterns": [{
+        "name": "constant.character.escape.turtleBASIC",
+        "match": "(\\\"|\\')"
+      }]
+    },
+    "keywords": {
+      "patterns": [{
+        "name": "keyword.control.turtleBASIC",
+        "match": "\\b(CONST|DEF|DIM|ELSE|END|ENDIF|ENDPROC|ENDWHILE|FOR|IF|LOCAL|NEXT|PRIVATE|REPEAT|RETURN|STEP|THEN|TO|UNTIL|WHILE)\\b"
+      }]
+    },
+    "operators": {
+      "patterns": [{
+        "name": "keyword.operator.turtleBASIC",
+        "match": "(\\+|-|\\*|\\/|\\bDIV\\b|\\bmod\\b|=|<>|<=|>=|<|>|\\bNOT\\b|\\bAND\\b|\\bOR\\b|\\bEOR\\b)"
+      }]
+    },
+    "delimiters": {
+		  "patterns": [{
+		    "name": "entity.name.punctuation.turtleBASIC",
+		    "match": "(\\(|\\)|\\[|\\]|,|:|;|\\.\\.|\\.)"
+		  }]
+	  },
+	  "comments": {
+      "name": "comment.block.turtleBASIC",
+      "begin": "REM",
+      "end": "\n"
+    },
+	  "doubleStrings": {
+      "name": "string.quoted.double.turtleBASIC",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [{ "include": "#escapes" }]
+	  }
+	},
+  "scopeName": "source.turtleBASIC"
+}

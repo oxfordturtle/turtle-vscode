@@ -1,0 +1,57 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Turtle Pascal",
+  "patterns": [
+    { "include": "#escapes" },
+    { "include": "#keywords" },
+    { "include": "#operators" },
+    { "include": "#delimiters" },
+    { "include": "#comments" },
+    { "include": "#doubleStrings" },
+    { "include": "#singleStrings" }
+  ],
+  "repository": {
+    "escapes": {
+      "patterns": [{
+        "name": "constant.character.escape.turtlePascal",
+        "match": "(\"\"|'')"
+      }]
+    },
+    "keywords": {
+      "patterns": [{
+        "name": "keyword.control.turtlePascal",
+        "match": "(?i)\\b(begin|const|do|downto|else|end|for|function|if|of|procedure|program|repeat|result|then|to|until|var|while)\\b"
+      }]
+    },
+    "operators": {
+      "patterns": [{
+        "name": "keyword.operator.turtlePascal",
+        "match": "(?i)(\\+|-|\\*|\\/|\\bdiv\\b|\\bmod\\b|=|<>|<=|>=|<|>|:=|\\bnot\\b|\\band\\b|\\bor\\b|\\bxor\\b)"
+      }]
+    },
+    "delimiters": {
+		  "patterns": [{
+		    "name": "entity.name.punctuation.turtlePascal",
+		    "match": "(\\(|\\)|\\[|\\]|,|:|;|\\.\\.|\\.)"
+		  }]
+	  },
+	  "comments": {
+      "name": "comment.block.turtlePascal",
+      "begin": "{",
+      "end": "}"
+    },
+	  "doubleStrings": {
+      "name": "string.quoted.double.turtlePascal",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [{ "include": "#escapes" }]
+    },
+    "singleStrings": {
+      "name": "string.quoted.single.turtlePascal",
+      "begin": "'",
+      "end": "'",
+      "patterns": [{ "include": "#escapes" }]
+	  }
+	},
+  "scopeName": "source.turtlePascal"
+}
