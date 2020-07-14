@@ -4,7 +4,11 @@
   "description": "Turtle languages support for VSCode",
   "version": "0.0.1",
   "license": "MIT",
-  "repository": "https://github.com/oxfordturtle/turtle-vscode",
+  "publisher": "oxfordturtle",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oxfordturtle/turtle-vscode"
+  },
   "engines": {
     "vscode": "^1.46.0"
   },
