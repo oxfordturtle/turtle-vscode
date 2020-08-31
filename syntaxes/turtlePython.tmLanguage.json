@@ -37,8 +37,8 @@
     },
     "comments": {
       "name": "comment.block.turtlePython",
-      "begin": "\\/*",
-      "end": "*\\/"
+      "begin": "#",
+      "end": "\n"
     },
     "doubleStrings": {
       "name": "string.quoted.double.turtlePython",
