@@ -24,6 +24,18 @@
         "configuration": "./basic-configuration.json"
       },
       {
+        "id": "turtleC",
+        "aliases": ["Turtle C", "turtleC"],
+        "extensions": [".tc"],
+        "configuration": "./c-configuration.json"
+      },
+      {
+        "id": "turtleJava",
+        "aliases": ["Turtle Java", "turtleJava"],
+        "extensions": [".tjav"],
+        "configuration": "./java-configuration.json"
+      },
+      {
         "id": "turtlePascal",
         "aliases": ["Turtle Pascal", "turtlePascal"],
         "extensions": [".tpas"],
@@ -34,6 +46,12 @@
         "aliases": ["Turtle Python", "turtlePython"],
         "extensions": [".tpy"],
         "configuration": "./python-configuration.json"
+      },
+      {
+        "id": "turtleTypeScript",
+        "aliases": ["Turtle TypeScript", "turtleTypeScript"],
+        "extensions": [".tts"],
+        "configuration": "./typescript-configuration.json"
       }
     ],
     "grammars": [
@@ -41,6 +59,16 @@
         "language": "turtleBASIC",
         "scopeName": "source.turtleBASIC",
         "path": "./syntaxes/turtleBASIC.tmLanguage.json"
+      },
+      {
+        "language": "turtleC",
+        "scopeName": "source.turtleC",
+        "path": "./syntaxes/turtleC.tmLanguage.json"
+      },
+      {
+        "language": "turtleJava",
+        "scopeName": "source.turtleJava",
+        "path": "./syntaxes/turtleJava.tmLanguage.json"
       },
       {
         "language": "turtlePascal",
@@ -51,6 +79,11 @@
         "language": "turtlePython",
         "scopeName": "source.turtlePython",
         "path": "./syntaxes/turtlePython.tmLanguage.json"
+      },
+      {
+        "language": "turtleTypeScript",
+        "scopeName": "source.turtleTypeScript",
+        "path": "./syntaxes/turtleTypeScript.tmLanguage.json"
       }
     ]
   }

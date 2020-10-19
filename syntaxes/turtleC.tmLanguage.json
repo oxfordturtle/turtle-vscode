@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "Turtle Python",
+  "name": "Turtle C",
   "patterns": [
     { "include": "#escapes" },
     { "include": "#keywords" },
@@ -13,45 +13,45 @@
   "repository": {
     "escapes": {
       "patterns": [{
-        "name": "constant.character.escape.turtlePython",
+        "name": "constant.character.escape.turtleC",
         "match": "(\\\"|\\')"
       }]
     },
     "keywords": {
       "patterns": [{
-        "name": "keyword.control.turtlePython",
-        "match": "\\b(def|elif|else|for|global|if|in|nonlocal|pass|return|while)\\b"
+        "name": "keyword.control.turtleC",
+        "match": "\\b(if|else|for|while|do|const|void|bool|char|int|string|return)\\b"
       }]
     },
     "operators": {
       "patterns": [{
-        "name": "keyword.operator.turtlePython",
-        "match": "(\\+|-|\\*|\\/\\/|\\/|%|==|!=|<=|>=|=|<|>|~|&|\\||\\^|not\b|and\b|or\b)"
+        "name": "keyword.operator.turtleC",
+        "match": "(\\+|-|\\*|\\/|%|==|!=|<=|>=|=|<|>|~|&&|\\|\\||\\^|!\b|&\b|\\|)"
       }]
     },
     "delimiters": {
       "patterns": [{
-        "name": "entity.name.punctuation.turtlePython",
-        "match": "(\\(|\\)|,|;|:|->)"
+        "name": "entity.name.punctuation.turtleC",
+        "match": "(\\(|\\)|{|}|,|;)"
       }]
     },
     "comments": {
-      "name": "comment.line.turtlePython",
-      "begin": "#",
+      "name": "comment.line.turtleC",
+      "begin": "//",
       "end": "\n"
     },
     "doubleStrings": {
-      "name": "string.quoted.double.turtlePython",
+      "name": "string.quoted.double.turtleC",
       "begin": "\"",
       "end": "\"",
       "patterns": [{ "include": "#escapes" }]
     },
     "singleStrings": {
-      "name": "string.quoted.single.turtlePython",
+      "name": "string.quoted.single.turtleC",
       "begin": "'",
       "end": "'",
       "patterns": [{ "include": "#escapes" }]
 	  }
   },
-  "scopeName": "source.turtlePython"
+  "scopeName": "source.turtleC"
 }
